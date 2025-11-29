@@ -5,7 +5,7 @@ import random
 app = Flask(__name__)
 app.secret_key = "clave-super-secreta"  # Necesaria para manejar sesiones
 
-client = MongoClient("mongodb://mongo:my_password@mongodb.railway.internal:27017/admin")
+client = MongoClient("mongodb://mongo:PzITQGArKyeIwqYKnGDLcQOainIdoJoG@mongodb.railway.internal:27017")
 db = client["adivinanzas"]
 coleccion = db["resultados"]
 
@@ -50,5 +50,6 @@ def index():
     return render_template("index.html", mensaje=mensaje)
     
 if __name__ == "__main__":
+
 
     app.run(host="0.0.0.0", port=5000)
